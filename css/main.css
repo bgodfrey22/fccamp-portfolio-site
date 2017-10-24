@@ -1,0 +1,630 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html {  
+    background: url(https://images.unsplash.com/photo-1484060901467-bce16cd8deba?dpr=1&auto=compress,format&fit=crop&w=2548&h=&q=80&cs=tinysrgb&crop) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding: 0 2em;
+    font-size: 1.25em;
+    font-weight: bold;
+    height: 100%;
+}
+header, main, footer {
+    width: 100%;
+}
+.flex-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items:center;
+    font-weight: bold;
+    width: 100%;
+}
+.nav {
+    display: flex;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:#00AD90;
+    opacity: .98;
+    z-index: 150;
+  }
+  .navitem, .navitem a {
+    display: inline-block;
+    list-style-type:none;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    margin: 0 .2em;
+  }
+  .navitem a:hover{
+    color: #fff;
+  }
+  .title {
+    text-align: center;
+    background: #e7e7e7;
+    opacity: .8;
+    width: 100%;
+    margin: 4em 0 .2em 0;
+    padding: 2% 0;
+    border-radius: 5px;
+  }
+  .title h1 {
+    font-family: 'Amatic SC', sans-serif;
+    font-weight: bold;
+    color: #000;
+    font-size: 4em;
+    margin: .2em;
+    padding: 0 0 .2em 0;
+    border-bottom: solid 3px #000;
+  }
+  .title h2 {
+    font-family: 'Satisfy', cursive;
+    font-size: 1.5em;
+    margin: .5em .2em;
+    padding: 0;
+    color: #000
+  }
+  .about {
+    display: flex;
+    flex-flow: column;
+    align-items:center;
+    background-color: #00AD90;
+    color: #e7e7e7;
+    opacity: .95;
+    width: 100%;
+    margin: 0 0 .2em 0;
+    border-radius: 5px;
+  }
+  
+  #about-img {
+    width: 30%;
+  }
+  #about-img img {
+    border-radius: 50%;
+  }
+  
+  .about h2 {
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 2em;
+    text-align: center;
+  }
+  .about p {
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 1em;
+  }
+  #more-about {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: #e7e7e7;
+  }
+  .skills {
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 2em;
+    text-align: center;
+    background-color: #e7e7e7;
+    opacity: .95;
+    height: 250px;
+    width: 100%;
+    margin: 0 0 .2em 0;
+    padding: .5rem 0 0 0;
+    border-radius: 5px;
+  }
+  #mfizz-icon {
+      margin-top: -1em;
+  }
+  #mfizz-icon ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 4%;
+}
+  .projects {
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 2em;
+    text-align: center;
+    color: #e7e7e7;
+    background-color: #AD2626;
+    opacity: .98; 
+    height: 300px;
+    width: 100%;
+    margin: 0 0 .2em 0;
+    padding: .5rem 0 0 0;
+    border-radius: 5px;
+  }
+  .contact {
+    background-color: #00AD90; 
+    color: #e7e7e7;
+    opacity: .98;
+    height: 480px;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .contact h2{
+    text-align: center;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 3em;
+  }
+  .contact-info {
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 1.4rem;
+  }
+  icons {
+    width: 100%;
+    
+  }
+  .icons ul li{
+    display: inline-block;
+    color: #e7e7e7;
+    font-size: 2.5rem;
+    list-style: none;
+    margin: 0 4%;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 768px) {
+    html {  
+        background: url(https://images.unsplash.com/photo-1484060901467-bce16cd8deba?dpr=1&auto=compress,format&fit=crop&w=2548&h=&q=80&cs=tinysrgb&crop) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+    }
+    body {
+        font-family: 'Open Sans Condensed', sans-serif;
+        padding: 0 2em;
+        font-size: 1.25em;
+        font-weight: bold;
+        height: 100%;
+    }
+    header, main, footer {
+        width: 100%;
+    }
+    .flex-container {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items:center;
+        font-weight: bold;
+        width: 100%;
+    }
+    .nav {
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background:#00AD90;
+        opacity: .95;
+        z-index: 150;
+      }
+      .navitem, .navitem a {
+        list-style-type: none;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #000;
+        margin: 0 1em;
+      }
+      .navitem a:hover{
+        color: #fff;
+      }
+      .title {
+        margin: 12% 0;
+        padding: 2% 0;
+        text-align: center;
+        background: #e7e7e7;
+        opacity: .78;
+        width: 100%;
+        border-radius: 5px;
+      }
+      .title h1 {
+        font-family: 'Amatic SC', sans-serif;
+        font-weight: bold;
+        color: #000;
+        font-size: 6em;
+        margin: .2em;
+        padding: 0 0 .2em 0;
+        border-bottom: solid 3px #000;
+      }
+      .title h2 {
+        font-family: 'Satisfy', cursive;
+        font-size: 3em;
+        margin: .5em .2em;
+        padding: 0;
+        color: #000
+      }
+      .about {
+        display: flex;
+        justify-content:space-between;
+        flex-flow: row;
+        align-items:center;
+        background-color: #00AD90;
+        color: #e7e7e7;
+        opacity: .95;
+        width: 100%;
+        margin: 2rem 0;
+        border-radius: 5px;
+      }
+      .about h2 {
+        font-family: 'Amatic SC', sans-serif;
+        font-size: 3em;
+        text-align: center;
+      }
+      .about p {
+        font-size: 1.4em;
+        font-weight: bold;
+        text-align: center;
+      }
+      #about-img {
+        width: 30%;
+      }
+      #about-img img {
+        border-radius: 50%;
+      }
+      #about-info {
+          width: 70%;
+      }
+      #more-about {
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        color: #e7e7e7;
+      }
+      .skills {
+        font-family: 'Amatic SC', sans-serif;
+        font-size: 2em;
+        text-align: center;
+        background-color: #e7e7e7;
+        opacity: .9;
+        height: 300px;
+        width: 100%;
+        margin: 2rem 0;
+        padding: .5rem 0 0 0;
+        border-radius: 5px;
+      }
+      #mfizz-icon ul li{
+        display: inline-block;
+        list-style: none;
+        margin: 0 4%;
+        font-size: 2em;   
+    }
+      .projects {
+        font-family: 'Amatic SC', sans-serif;
+        font-size: 2em;
+        text-align: center;
+        color: #e7e7e7;
+        background-color: #AD2626;
+        opacity: .9; 
+        height: 300px;
+        width: 100%;
+        margin: 2rem 0;
+        padding: .5rem 0 0 0;
+        border-radius: 5px;
+      }
+      .contact {
+        background: url('https://images.unsplash.com/photo-1482440308425-276ad0f28b19?dpr=1&auto=compress,format&fit=crop&w=2550&h=&q=80&cs=tinysrgb&crop=');
+        background-size: cover;
+        color: #e7e7e7;
+        opacity: 1;
+        height: 580px;
+        width: 100%;
+        border-radius: 5px;
+        margin: 1em 0;
+      }
+      .contact h2{
+        text-align: center;
+        font-family: 'Amatic SC', sans-serif;
+        font-size: 3em;
+      }
+      .contact-info {
+        width: 50%;
+        text-align: left;
+        font-size: 2rem;
+        color: #000;
+        margin: -2% 0 0 3%;
+      }
+      icons {
+        width: 50%;
+      }
+      .icons ul li{
+        display: inline-block;
+        list-style: none;
+        margin: 0 2% 0 0;
+        color: #000;
+        font-size: 3em;
+    }
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
