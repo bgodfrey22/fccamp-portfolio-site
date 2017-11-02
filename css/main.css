@@ -405,8 +405,7 @@ header, main, footer {
         position: fixed;
         top: 0;
         left: 0;
-        background:#00AD90;
-        opacity: .95;
+        background: none;
         z-index: 150;
       }
       .navitem, .navitem a {
@@ -414,10 +413,16 @@ header, main, footer {
         text-decoration: none;
         text-transform: uppercase;
         color: #000;
+        font-size: 1.05em;
         margin: 0 1em;
       }
       .navitem a:hover{
-        color: #fff;
+        color: #e7e7e7;
+        background-color: #000;
+        opacity: .7;
+        border: 1px solid #e7e7e7;
+        border-radius: 5px;
+        padding: 0 10px;
       }
       .title {
         margin: 12% 0;
